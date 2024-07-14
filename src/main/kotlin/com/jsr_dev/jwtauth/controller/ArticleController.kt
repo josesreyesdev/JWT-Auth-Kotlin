@@ -1,6 +1,7 @@
 package com.jsr_dev.jwtauth.controller
 
-import com.jsr_dev.jwtauth.model.Article
+import com.jsr_dev.jwtauth.domain.model.article.Article
+import com.jsr_dev.jwtauth.domain.model.article.ArticleResponse
 import com.jsr_dev.jwtauth.service.ArticleService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -16,5 +17,9 @@ class ArticleController(private val articleService: ArticleService) {
 
 
     private fun Article.toResponse(): ArticleResponse =
-        ArticleResponse(id = this.id, title = this.title, content = this.content)
+        ArticleResponse(
+            id = this.id,
+            title = this.title,
+            content = this.content
+        )
 }

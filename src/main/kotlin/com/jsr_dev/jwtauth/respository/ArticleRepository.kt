@@ -1,6 +1,6 @@
 package com.jsr_dev.jwtauth.respository
 
-import com.jsr_dev.jwtauth.model.Article
+import com.jsr_dev.jwtauth.domain.model.article.Article
 import org.springframework.stereotype.Repository
 import java.util.*
 

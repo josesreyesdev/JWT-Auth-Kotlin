@@ -1,4 +1,4 @@
-package com.jsr_dev.jwtauth.controller
+package com.jsr_dev.jwtauth.domain.model.article
 
 import java.util.*
 

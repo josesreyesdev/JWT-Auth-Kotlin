@@ -1,6 +1,6 @@
 package com.jsr_dev.jwtauth.service
 
-import com.jsr_dev.jwtauth.model.Article
+import com.jsr_dev.jwtauth.domain.model.article.Article
 import com.jsr_dev.jwtauth.respository.ArticleRepository
 import org.springframework.stereotype.Service
 
