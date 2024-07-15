@@ -3,7 +3,6 @@ package com.jsr_dev.jwtauth.respository
 import com.jsr_dev.jwtauth.domain.model.user.Role
 import com.jsr_dev.jwtauth.domain.model.user.UpdateData
 import com.jsr_dev.jwtauth.domain.model.user.User
-import com.jsr_dev.jwtauth.domain.model.user.UserMapper
 import com.jsr_dev.jwtauth.domain.model.user.UserMapper.toUser
 import org.springframework.stereotype.Repository
 import java.util.*
