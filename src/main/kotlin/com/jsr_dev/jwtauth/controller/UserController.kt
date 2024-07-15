@@ -1,6 +1,8 @@
 package com.jsr_dev.jwtauth.controller
 
-import com.jsr_dev.jwtauth.domain.model.user.updateData
+import com.jsr_dev.jwtauth.domain.model.user.UpdateData
+import com.jsr_dev.jwtauth.domain.model.user.UserMapper.toModel
+import com.jsr_dev.jwtauth.domain.model.user.UserMapper.toResponse
 import com.jsr_dev.jwtauth.domain.model.user.UserRequest
 import com.jsr_dev.jwtauth.domain.model.user.UserResponse
 import com.jsr_dev.jwtauth.service.UserService
@@ -8,7 +10,7 @@ import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.server.ResponseStatusException
-import java.util.UUID
+import java.util.*
 
 @RestController
 @RequestMapping("/api/user")
@@ -22,7 +24,8 @@ class UserController(private val userService: UserService) {
 
     @GetMapping
     fun listAll(): List<UserResponse> =
-        userService.findAll().map { it.toResponse() }
+        userService.findAll()
+            .map { it.toResponse() }
 
     @GetMapping("/{uuid}")
     fun findByUUID(@PathVariable uuid: UUID): UserResponse =
@@ -31,7 +34,7 @@ class UserController(private val userService: UserService) {
             ?: throw ResponseStatusException(HttpStatus.NOT_FOUND, "User not found.")
 
     @PutMapping
-    fun updateByUUID(@RequestBody updateData: updateData): UserResponse =
+    fun updateByUUID(@RequestBody updateData: UpdateData): UserResponse =
         userService.updateUser(updateData)
             ?.toResponse()
             ?: throw ResponseStatusException(HttpStatus.NOT_FOUND, "User not found.")

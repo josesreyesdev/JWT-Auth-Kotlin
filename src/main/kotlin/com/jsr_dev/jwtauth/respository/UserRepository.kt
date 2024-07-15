@@ -1,8 +1,10 @@
 package com.jsr_dev.jwtauth.respository
 
 import com.jsr_dev.jwtauth.domain.model.user.Role
-import com.jsr_dev.jwtauth.domain.model.user.updateData
+import com.jsr_dev.jwtauth.domain.model.user.UpdateData
 import com.jsr_dev.jwtauth.domain.model.user.User
+import com.jsr_dev.jwtauth.domain.model.user.UserMapper
+import com.jsr_dev.jwtauth.domain.model.user.UserMapper.toUser
 import org.springframework.stereotype.Repository
 import java.util.*
 
@@ -49,16 +51,13 @@ class UserRepository {
         } ?: false
     }
 
-    fun updateUser(updateData: updateData): User? {
-        val userToUpdate = users.firstOrNull { it.id == updateData.id }
+    fun updateUser(updateData: UpdateData): User? {
+        val userToUpdate: User? = users.firstOrNull { it.id == updateData.id }
 
-        userToUpdate?.let {
-            users.remove(it)
+        userToUpdate?.let { user ->
+            users.remove(user)
 
-            val updatedUser = it.copy(
-                email = updateData.email ?: it.email,
-                password = updateData.password ?: it.password
-            )
+            val updatedUser = updateData.toUser(user)
 
             users.add(updatedUser)
             return updatedUser

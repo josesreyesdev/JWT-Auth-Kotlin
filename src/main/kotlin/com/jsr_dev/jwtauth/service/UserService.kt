@@ -1,6 +1,6 @@
 package com.jsr_dev.jwtauth.service
 
-import com.jsr_dev.jwtauth.domain.model.user.updateData
+import com.jsr_dev.jwtauth.domain.model.user.UpdateData
 import com.jsr_dev.jwtauth.domain.model.user.User
 import com.jsr_dev.jwtauth.respository.UserRepository
 import org.springframework.stereotype.Service
@@ -22,7 +22,7 @@ class UserService(private val userRepository: UserRepository) {
 
     fun findAll(): List<User> = userRepository.findAll().toList()
 
-    fun updateUser(updateData: updateData): User? =
+    fun updateUser(updateData: UpdateData): User? =
         userRepository.updateUser(updateData)
 
     fun deleteByUUID(uuid: UUID): Boolean = userRepository.deleteByUUID(uuid)

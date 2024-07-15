@@ -7,11 +7,4 @@ data class User(
     val email: String,
     val password: String,
     val role: Role
-) {
-    fun toResponse(): UserResponse {
-        return UserResponse(
-            uuid = this.id,
-            email = this.email
-        )
-    }
-}
+)
