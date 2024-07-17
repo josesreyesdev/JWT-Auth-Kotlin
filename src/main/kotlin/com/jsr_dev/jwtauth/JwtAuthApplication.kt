@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class JwtauthApplication
+class JwtAuthApplication
 
 fun main(args: Array<String>) {
-	runApplication<JwtauthApplication>(*args)
+	runApplication<JwtAuthApplication>(*args)
 }
