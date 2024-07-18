@@ -60,13 +60,14 @@ class UserRepository(private val encoder: PasswordEncoder) {
         userToUpdate?.let { user ->
             users.remove(user)
 
-            val updatedUser = updateData.toUser(user)
+            val update = updateData.toUser(user)
 
-            val updated = passwordEncoder(updatedUser)
+            val updatedUser = passwordEncoder(update)
 
-            users.add(updated)
-            return updated
+            users.add(updatedUser)
+            return updatedUser
         }
+
         return null
     }
 

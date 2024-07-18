@@ -22,8 +22,7 @@ class UserService(private val userRepository: UserRepository) {
 
     fun findAll(): List<User> = userRepository.findAll().toList()
 
-    fun updateUser(updateData: UpdateData): User? =
-        userRepository.updateUser(updateData)
+    fun updateUser(updateData: UpdateData): User? = userRepository.updateUser(updateData)
 
     fun deleteByUUID(uuid: UUID): Boolean = userRepository.deleteByUUID(uuid)
 }
