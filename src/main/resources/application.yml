@@ -3,12 +3,12 @@ spring:
   name: jwtauth
 
 # No muestra el stack-trace de accesos no autorizados en la API
-#server:
-#  error:
-#  include-stacktrace: never
+server:
+  error:
+  include-stacktrace: never
 
 # Conf JWT
 jwt:
-  key: ${JWT_KEY:922106c2-9901-441d-b46e-205fae92619c}
+  key: ${JWT_KEY}
   access-token-expiration: 3600000
   refresh-token-expiration: 86400000
