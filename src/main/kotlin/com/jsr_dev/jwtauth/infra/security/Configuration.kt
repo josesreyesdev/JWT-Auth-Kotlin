@@ -1,6 +1,6 @@
 package com.jsr_dev.jwtauth.infra.security
 
-import com.jsr_dev.jwtauth.respository.UserRepository
+import com.jsr_dev.jwtauth.repository.UserRepository
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

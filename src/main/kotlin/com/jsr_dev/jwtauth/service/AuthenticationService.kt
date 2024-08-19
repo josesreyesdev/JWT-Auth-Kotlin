@@ -5,7 +5,7 @@ import com.jsr_dev.jwtauth.domain.model.auth.AuthenticationResponse
 import com.jsr_dev.jwtauth.infra.security.CustomUserDetailsService
 import com.jsr_dev.jwtauth.infra.security.JwtProperties
 import com.jsr_dev.jwtauth.infra.security.TokenService
-import com.jsr_dev.jwtauth.respository.RefreshTokenRepository
+import com.jsr_dev.jwtauth.repository.RefreshTokenRepository
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.core.userdetails.UserDetails

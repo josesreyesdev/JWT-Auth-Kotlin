@@ -1,6 +1,6 @@
 package com.jsr_dev.jwtauth.infra.security
 
-import com.jsr_dev.jwtauth.respository.UserRepository
+import com.jsr_dev.jwtauth.repository.UserRepository
 import org.springframework.security.core.userdetails.User
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService
