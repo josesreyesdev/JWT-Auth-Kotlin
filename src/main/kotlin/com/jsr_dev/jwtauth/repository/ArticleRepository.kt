@@ -1,4 +1,4 @@
-package com.jsr_dev.jwtauth.respository
+package com.jsr_dev.jwtauth.repository
 
 import com.jsr_dev.jwtauth.domain.model.article.Article
 import org.springframework.stereotype.Repository

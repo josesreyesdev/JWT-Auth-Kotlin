@@ -1,4 +1,4 @@
-package com.jsr_dev.jwtauth.respository
+package com.jsr_dev.jwtauth.repository
 
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.stereotype.Component

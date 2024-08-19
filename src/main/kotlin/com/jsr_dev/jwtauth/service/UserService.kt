@@ -2,7 +2,7 @@ package com.jsr_dev.jwtauth.service
 
 import com.jsr_dev.jwtauth.domain.model.user.UpdateData
 import com.jsr_dev.jwtauth.domain.model.user.User
-import com.jsr_dev.jwtauth.respository.UserRepository
+import com.jsr_dev.jwtauth.repository.UserRepository
 import org.springframework.stereotype.Service
 import java.util.UUID
 
